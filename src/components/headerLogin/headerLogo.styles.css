@@ -1,0 +1,16 @@
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #A55A2E;
+    background: linear-gradient(to left, #0D0D0D 50%, peachpuff);
+}
+
+.header-wrapper a {
+    color: black;
+}
+
+.navbrand img {
+    width: 80px;
+    margin-left: 2rem;
+}

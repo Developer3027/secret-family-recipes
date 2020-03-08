@@ -1,21 +1,38 @@
+// Useing Font Awesome for the icons of this project.
+// This JS holds all the buttons that use icons for this project.
+// Used Free and solid - (fas)
+
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons';
-//import { faConciergeBell, faPizzaSlice } from '@fortawesome/free-solid-svg-icons'
 import "./appComponents.css";
 
 library.add(fas)
 
+// Social Icons
 export const Twitter = () => (
-    <FontAwesomeIcon className="all-icon box" icon="hashtag" />
+    <FontAwesomeIcon className="all-icon box" icon="dove" />
 )
 export const YouTube = () => (
     <FontAwesomeIcon className="all-icon box" icon="photo-video" />
 )
+
+// Log in and Log out
 export const Logout = () => (
-    <FontAwesomeIcon className="all-icon box" icon="sign-out-alt" />
+    <div className="btn">
+      <span className="btntxt">Log Out</span>
+      <FontAwesomeIcon className="all-icon box" icon="sign-out-alt" />
+    </div>
 )
+export const LogIn = () => (
+    <div className="btn">
+    <span className="btntxt">Log In</span>
+      <FontAwesomeIcon className="all-icon box" icon="sign-in-alt" />
+    </div>
+)
+
+// Delete
 export const Delete = () => (
     <FontAwesomeIcon className="all-icon box" icon="minus" />
 )

@@ -48,3 +48,14 @@
 .side-wrap .i {
     margin-right: 2em;
 }
+
+/* Sign out */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btntxt {
+    color: white;
+}
