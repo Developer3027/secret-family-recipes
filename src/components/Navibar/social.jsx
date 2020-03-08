@@ -1,14 +1,22 @@
 import React from 'react';
-import { Logout, YouTube, Twitter } from '../AppComponents/AllBtn';
+import { Link } from 'react-router-dom';
+import { Logout, LogIn, Twitter } from '../AppComponents/AllBtn';
 import './navi.css';
 
 
 const Social = () => {
     return(
         <div className="social-wrap">
-            <Twitter />
-            <YouTube />
-            <Logout />
+            <div className="social-nav">
+                <Twitter />
+            </div>
+            <div className="social-log-nav">
+                <Link to="/login">
+                    <LogIn />
+                </Link>
+
+                <Logout />
+            </div>
         </div>
     )
 }

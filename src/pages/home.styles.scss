@@ -1,0 +1,32 @@
+.home-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    background-image: url('../img/five-plates.jpg');
+    background-size: contain;
+}
+
+.home-info {
+    background-color: palegoldenrod;
+    padding: 2em;
+    opacity: .9;
+}
+
+#home-text {
+    background-color: rgba($color: #000000, $alpha: 1.0);
+    padding: 2em;
+    color: white;
+}
+
+.home-wrapper h2 {
+    margin-top: 2em;
+    font-size: 3em;
+}
+
+.home-wrapper p {
+    font-size: 1.2em;
+    width: 500px;
+    text-align: center;
+}
