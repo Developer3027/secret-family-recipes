@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { auth } from '../../firebase/firebase.utilis';
 import './headerLogo.styles.css';
 import SFRlogo from '../../img/SFRlogo.png';
-import Social from './../Navibar/social';
 
-const HeaderLogin = () => {
+const HeaderLogin = ({currentUser}) => {
     return(
         <div className="header-wrapper">
             <div className="navbrand">
@@ -12,8 +12,12 @@ const HeaderLogin = () => {
                     <img src={SFRlogo} alt="logo" />
                 </Link>
             </div>
-            <div>
-                <Social />
+            <div >
+                {
+                    currentUser 
+                    ?   <Link to="/" ><div className="head-wrapper" onClick={ () => auth.signOut() }>Log Out</div></Link>
+                    :   <Link to="/login"><div className="head-wrapper">Log In</div></Link>
+                }
             </div>
         </div>
     )

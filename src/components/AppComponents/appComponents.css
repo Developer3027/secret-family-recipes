@@ -1,3 +1,7 @@
+icon {
+    width: 25px;
+}
+
 .all-btn-wrap {
     display: flex;
     justify-content: space-evenly;
@@ -16,6 +20,8 @@
     border: 2px solid #F2BC1B;
     border-radius: 50%;
     padding: .5rem;
+    width: 25px;
+    height: 25px;
     background-color: peachpuff;
 }
 
@@ -59,3 +65,5 @@
 .btntxt {
     color: white;
 }
+
+

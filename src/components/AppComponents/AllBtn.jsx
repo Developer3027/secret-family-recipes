@@ -19,18 +19,20 @@ export const YouTube = () => (
 )
 
 // Log in and Log out
-export const Logout = () => (
-    <div className="btn">
-      <span className="btntxt">Log Out</span>
+export const Navbtn = ({ children, ...otherProps }) => {
+  return(
+    <div className="btn" { ...otherProps } >
+      <span className="btntxt">{ children }</span>
       <FontAwesomeIcon className="all-icon box" icon="sign-out-alt" />
     </div>
-)
-export const LogIn = () => (
-    <div className="btn">
-    <span className="btntxt">Log In</span>
-      <FontAwesomeIcon className="all-icon box" icon="sign-in-alt" />
-    </div>
-)
+  )
+}
+// export const LogIn = () => (
+//     <div className="btn">
+//     <span className="btntxt">Log In</span>
+//       <FontAwesomeIcon className="all-icon box" icon="sign-in-alt" />
+//     </div>
+// )
 
 // Delete
 export const Delete = () => (
