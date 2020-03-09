@@ -1,6 +1,12 @@
 .log-in {
-    width: 30vw;
+    width: 380px;
     display: flex;
     padding: 1em 0;
     flex-direction: column;
   }
+
+  
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
