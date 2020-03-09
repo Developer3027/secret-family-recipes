@@ -1,7 +1,10 @@
 import React from 'react';
+
 import FormInput from './../inputs/form-input.components';
-import './registerForm.styles.scss';
 import CustomButton from './../Custom-Button/Custom-Button.component';
+
+import { auth, createUserProfileDocument } from './../../firebase/firebase.utilis';
+import './registerForm.styles.scss';
 
 class RegisterForm extends React.Component {
     constructor() {
@@ -15,28 +18,38 @@ class RegisterForm extends React.Component {
         }
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
+    handleSubmit = async event => {
+        event.preventDefault();
         const { displayName, email, password, confirmPassword } = this.state
 
         if(password !== confirmPassword) {
             alert("Those passwords do not match!");
             return;
-        }else{
+        }
+
+        try {
+            const { user } = await auth.createUserWithEmailAndPassword(
+                email,
+                password
+            );
+
+            await createUserProfileDocument( user, { displayName });
+
             this.setState({
-                displayName: displayName,
-                email: email,
-                password: password,
-                confirmPassword: confirmPassword
+                displayName: "",
+                email: "",
+                password: "",
+                confirmPassword: ""
             })
-            console.log(this.state);
+
+        }catch (error) {
+            console.error('error creating user in register form', error.message);
         }
     }
 
 
     handleChange = (e) => {
         const { name, value } = e.target;
-        e.persist();
         this.setState({
             [name]: value
         })
